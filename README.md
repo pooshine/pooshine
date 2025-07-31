@@ -1,16 +1,121 @@
-## Hi there 👋
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فروشگاه سیسمونی پوشینه</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ff4d88;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .search-box {
+      text-align: center;
+      margin: 20px;
+    }
+    .search-box input {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .admin-btn {
+      display: block;
+      margin: 10px auto;
+      background-color: #ff4d88;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .admin-panel {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact, .support, .address {
+      text-align: center;
+      margin: 20px;
+    }
+    .contact a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 5px;
+      display: inline-block;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #ffb3cc;
+      padding: 10px;
+      text-align: center;
+    }
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 400px;
+    }
+    input[type="file"] {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>  <header>
+    به فروشگاه سیسمونی پوشینه خوش آمدید
+  </header>  <div class="search-box">
+    <input type="text" placeholder="جستجوی محصول...">
+  </div><button class="admin-btn" onclick="showAdminLogin()">ورود به پنل مدیریت</button>
 
-<!--
-**pooshine/pooshine** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  <div id="admin-login" class="admin-panel">
+    <input type="password" id="admin-pass" placeholder="رمز ورود">
+    <button onclick="loginAdmin()">ورود</button>
+  </div>  <div id="admin-panel" class="admin-panel">
+    <h2>پنل مدیریت</h2>
+    <p>در این بخش می‌توانید عکس و قیمت محصولات را اضافه کنید (فقط نمایشی است).</p>
+    <input type="text" placeholder="نام محصول">
+    <input type="text" placeholder="قیمت">
+    <input type="file">
+    <button>افزودن محصول</button>
+  </div>  <div class="contact">
+    <strong>با ما در ارتباط باشید:</strong><br>
+    <a href="tel:66404387">66404387</a> - 
+    <a href="tel:66967241">66967241</a><br>
+    <a href="tel:09121232025">09121232025</a> - 
+    <a href="tel:09331096465">09331096465</a>
+  </div>  <div class="support">
+    <strong>پشتیبانی:</strong><br>
+    9981304389
+  </div>  <div class="address">
+    <strong>آدرس فروشگاه:</strong><br>
+    چهارراه امیر اکرم، بازار ولیعصر آکسفورد، همکف، پلاک ١٩ شرقی
+  </div>  <footer>
+    تمامی حقوق محفوظ است © فروشگاه پوشینه
+  </footer>  <script>
+    function showAdminLogin() {
+      document.getElementById("admin-login").style.display = "block";
+    }
+    function loginAdmin() {
+      const pass = document.getElementById("admin-pass").value;
+      if (pass === "1234") {
+        document.getElementById("admin-panel").style.display = "block";
+        document.getElementById("admin-login").style.display = "none";
+      } else {
+        alert("رمز اشتباه است");
+      }
+    }
+  </script></body>
+</html>
